@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>藤ノ井俊樹の旬の厳選10銘柄 2026新春号 — 迷わず買える、答えがある。</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700;900&family=Shippori+Mincho+B1:wght@400;700;800&family=BIZ+UDMincho:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:    #0F0C08;
+  --paper:  #F9F6F0;
+  --paper2: #F0EBE1;
+  --gold:   #B8943F;
+  --gold-h: #D4AE58;
+  --gold-d: #7A6028;
+  --red:    #B5271C;
+  --slate:  #1C2B3A;
+  --slate2: #243447;
+  --muted:  #6B5E4E;
+  --line:   rgba(184,148,63,0.25);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Serif JP', 'BIZ UDMincho', serif;
+  background: var(--ink);
+  color: var(--paper);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─────────────────────────────
+   UTILITY
+───────────────────────────── */
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
+.wrap-sm { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
+
+.gold { color: var(--gold-h); }
+.red  { color: var(--red); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.4rem;
+}
+
+.section-h {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: clamp(1.55rem, 4.5vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+/* ─────────────────────────────
+   REVEAL
+───────────────────────────── */
+.rv {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.rv.in { opacity: 1; transform: none; }
+.rv.d1 { transition-delay: 0.1s; }
+.rv.d2 { transition-delay: 0.22s; }
+.rv.d3 { transition-delay: 0.34s; }
+.rv.d4 { transition-delay: 0.46s; }
+.rv.d5 { transition-delay: 0.58s; }
+
+/* ─────────────────────────────
+   NOISE TEXTURE OVERLAY
+───────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.6;
+}
+
+/* ─────────────────────────────
+   ANNOUNCEMENT BAR
+───────────────────────────── */
+.ann-bar {
+  background: var(--red);
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  position: relative;
+  z-index: 50;
+}
+.ann-bar span { opacity: 0.75; margin: 0 0.5rem; }
+
+/* ─────────────────────────────
+   HERO
+───────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+/* diagonal gold accent */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%; right: -10%;
+  width: 55%; height: 140%;
+  background: linear-gradient(160deg,
+    rgba(184,148,63,0.07) 0%,
+    rgba(184,148,63,0.03) 40%,
+    transparent 70%);
+  transform: skewX(-8deg);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 5rem 1.25rem 4rem;
+}
+
+/* progress bar — urgency */
+.urgency-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 2.8rem;
+}
+.urgency-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  white-space: nowrap;
+  font-weight: 700;
+}
+.urgency-track {
+  flex: 1;
+  height: 3px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  max-width: 200px;
+}
+.urgency-fill {
+  height: 100%;
+  width: 72%;
+  background: var(--red);
+  border-radius: 2px;
+  animation: pulse-bar 2s ease-in-out infinite;
+}
+@keyframes pulse-bar {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+/* hero typography */
+.hero-pre {
+  font-size: clamp(0.82rem, 2vw, 1rem);
+  color: rgba(249,246,240,0.55);
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fiu 0.9s ease 0.3s forwards;
+}
+
+.hero-h1 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: clamp(2rem, 7vw, 4rem);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.6rem;
+  opacity: 0;
+  animation: fiu 1s ease 0.55s forwards;
+}
+
+.hero-h1 em {
+  font-style: normal;
+  color: var(--gold-h);
+  position: relative;
+  display: inline-block;
+}
+
+/* underline decoration on key word */
+.hero-h1 em::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: expand 0.7s ease 1.4s forwards;
+}
+@keyframes expand { to { transform: scaleX(1); } }
+
+.hero-lead {
+  font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+  line-height: 2.1;
+  color: rgba(249,246,240,0.65);
+  max-width: 560px;
+  margin-bottom: 2.8rem;
+  opacity: 0;
+  animation: fiu 0.9s ease 0.85s forwards;
+}
+
+@keyframes fiu {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* 3-stat row */
+.hero-nums {
+  display: flex;
+  gap: 0;
+  margin-bottom: 3rem;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  max-width: 560px;
+  opacity: 0;
+  animation: fiu 0.9s ease 1.1s forwards;
+}
+.hero-num-item {
+  flex: 1;
+  padding: 1.1rem 1.2rem;
+  text-align: center;
+  border-right: 1px solid var(--line);
+  background: rgba(255,255,255,0.02);
+}
+.hero-num-item:last-child { border-right: none; }
+.hero-num-val {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  color: var(--gold-h);
+  line-height: 1;
+  display: block;
+}
+.hero-num-lbl {
+  font-size: 0.62rem;
+  color: rgba(249,246,240,0.42);
+  letter-spacing: 0.1em;
+  margin-top: 0.35rem;
+  display: block;
+}
+
+/* CTA block */
+.cta-block {
+  opacity: 0;
+  animation: fiu 0.9s ease 1.35s forwards;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: 'Shippori Mincho B1', serif;
+  font-weight: 800;
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  padding: 1rem 2.6rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: 0 4px 28px rgba(184,148,63,0.35);
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.22) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.55s;
+}
+.btn-primary:hover { background: var(--gold-h); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(184,148,63,0.5); }
+.btn-primary:hover::before { transform: translateX(110%); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--line);
+  color: rgba(249,246,240,0.55);
+  font-size: 0.82rem;
+  padding: 0.75rem 1.6rem;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+  letter-spacing: 0.05em;
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold-h); }
+
+.cta-sub { font-size: 0.7rem; color: rgba(249,246,240,0.32); margin-top: 0.85rem; letter-spacing: 0.05em; }
+
+/* scroll indicator */
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0;
+  animation: fiu 0.9s ease 2s forwards;
+}
+.scroll-hint span { font-size: 0.6rem; letter-spacing: 0.25em; color: rgba(249,246,240,0.3); }
+.scroll-arrow { width: 1px; height: 36px; background: linear-gradient(to bottom, rgba(184,148,63,0.6), transparent); animation: scroll-drop 1.6s ease-in-out infinite; }
+@keyframes scroll-drop { 0%,100%{transform:scaleY(0); transform-origin:top;} 50%{transform:scaleY(1);} }
+
+/* ─────────────────────────────
+   WHO IS THIS FOR — target section
+───────────────────────────── */
+.target-sec {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.target-sec::before {
+  content: '失';
+  position: absolute;
+  right: -0.1em;
+  top: -0.15em;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 22rem;
+  font-weight: 800;
+  color: rgba(0,0,0,0.035);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  margin-top: 3rem;
+  background: var(--paper2);
+}
+
+.who-card {
+  background: var(--paper);
+  padding: 2rem 1.8rem;
+  position: relative;
+  transition: background 0.2s;
+}
+.who-card:hover { background: #fff; }
+
+.who-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--gold);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.who-card:hover::before { opacity: 1; }
+
+.who-icon {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.who-card h3 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+.who-card p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.who-conclusion {
+  margin-top: 3.5rem;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2.5rem;
+  text-align: center;
+}
+.who-conclusion p {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  line-height: 1.9;
+  font-family: 'Shippori Mincho B1', serif;
+  font-weight: 700;
+}
+.who-conclusion strong {
+  color: var(--gold-h);
+  display: block;
+  font-size: 1.15em;
+  margin-top: 0.5rem;
+}
+
+/* ─────────────────────────────
+   WHAT YOU GET — product reveal
+───────────────────────────── */
+.what-sec {
+  background: var(--slate);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* blueprint grid bg */
+.what-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(184,148,63,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,148,63,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.what-reveal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+@media (max-width: 600px) { .what-reveal { grid-template-columns: 1fr; } }
+
+.what-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(184,148,63,0.18);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.what-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-d), var(--gold-h));
+}
+.what-card-num {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(184,148,63,0.12);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.what-card h3 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--gold-h);
+  margin-bottom: 0.7rem;
+}
+.what-card p {
+  font-size: 0.84rem;
+  line-height: 1.95;
+  color: rgba(249,246,240,0.6);
+}
+
+.what-highlight {
+  margin-top: 1.5rem;
+  background: rgba(184,148,63,0.08);
+  border: 1px solid rgba(184,148,63,0.25);
+  padding: 1.8rem 2rem;
+  text-align: center;
+  position: relative;
+}
+.what-highlight p {
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
+  line-height: 2;
+  color: rgba(249,246,240,0.7);
+}
+.what-highlight strong {
+  color: var(--gold-h);
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1.1em;
+}
+
+/* ─────────────────────────────
+   WHY — pain → solution
+───────────────────────────── */
+.why-sec {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 6rem 0;
+}
+
+.pain-vs {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: stretch;
+  margin-top: 3rem;
+  border: 1px solid var(--paper2);
+}
+@media (max-width: 640px) {
+  .pain-vs { grid-template-columns: 1fr; }
+  .pain-vs-arrow { display: none; }
+}
+
+.pain-col {
+  padding: 2.2rem 2rem;
+}
+.pain-col.bad {
+  background: rgba(181,39,28,0.04);
+  border-right: 1px solid var(--paper2);
+}
+.pain-col.good {
+  background: rgba(184,148,63,0.05);
+}
+
+.pain-vs-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  background: var(--paper);
+}
+.pain-vs-arrow span {
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.pain-col h4 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid;
+}
+.pain-col.bad h4 { color: var(--red); border-color: rgba(181,39,28,0.2); }
+.pain-col.good h4 { color: var(--gold-d); border-color: rgba(184,148,63,0.25); }
+
+.pain-list-item {
+  display: flex;
+  gap: 0.7rem;
+  font-size: 0.86rem;
+  line-height: 1.85;
+  margin-bottom: 0.9rem;
+  color: var(--muted);
+}
+.pain-list-item:last-child { margin-bottom: 0; }
+.pain-marker { flex-shrink: 0; font-size: 0.9rem; }
+
+/* ─────────────────────────────
+   WHEN — urgency section
+───────────────────────────── */
+.when-sec {
+  background: var(--ink);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.when-timeline {
+  margin-top: 3rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.when-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0.6rem;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+
+.tl-item {
+  position: relative;
+  padding-bottom: 2.4rem;
+  padding-left: 1.5rem;
+}
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-dot {
+  position: absolute;
+  left: -1.45rem;
+  top: 0.15rem;
+  width: 12px;
+  height: 12px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.tl-dot.now {
+  background: var(--red);
+  box-shadow: 0 0 0 4px rgba(181,39,28,0.25);
+  animation: ping 1.5s ease-in-out infinite;
+}
+@keyframes ping {
+  0%,100% { box-shadow: 0 0 0 4px rgba(181,39,28,0.25); }
+  50%      { box-shadow: 0 0 0 8px rgba(181,39,28,0.1); }
+}
+
+.tl-period {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.tl-item h4 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+.tl-item p {
+  font-size: 0.83rem;
+  line-height: 1.85;
+  color: rgba(249,246,240,0.55);
+}
+
+.urgency-box {
+  margin-top: 3.5rem;
+  background: linear-gradient(135deg, rgba(181,39,28,0.12) 0%, rgba(181,39,28,0.05) 100%);
+  border: 1px solid rgba(181,39,28,0.4);
+  padding: 2rem 2.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.urgency-box::before {
+  content: '！';
+  position: absolute;
+  right: -0.05em; top: -0.2em;
+  font-size: 12rem;
+  font-weight: 900;
+  color: rgba(181,39,28,0.06);
+  line-height: 1;
+  font-family: 'Shippori Mincho B1', serif;
+  pointer-events: none;
+}
+.urgency-box h4 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--red);
+  margin-bottom: 0.8rem;
+}
+.urgency-box p {
+  font-size: 0.86rem;
+  line-height: 1.95;
+  color: rgba(249,246,240,0.65);
+}
+
+/* ─────────────────────────────
+   HOW — selection logic
+───────────────────────────── */
+.how-sec {
+  background: var(--paper2);
+  color: var(--ink);
+  padding: 6rem 0;
+}
+
+.how-steps {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1px;
+  background: var(--paper);
+}
+
+.how-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  background: var(--paper2);
+}
+.how-step:hover .how-step-num { background: var(--ink); color: var(--gold-h); }
+
+.how-step-num {
+  background: var(--ink);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, color 0.2s;
+  padding: 1.5rem;
+}
+.how-step-body {
+  padding: 1.8rem 2rem;
+  background: #fff;
+}
+.how-step-body h4 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.how-step-body p {
+  font-size: 0.83rem;
+  line-height: 1.95;
+  color: var(--muted);
+}
+
+/* data chips */
+.data-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+.chip {
+  background: var(--ink);
+  color: var(--gold-h);
+  font-size: 0.72rem;
+  padding: 0.4rem 1rem;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(184,148,63,0.25);
+}
+
+/* ─────────────────────────────
+   PERFORMANCE
+───────────────────────────── */
+.perf-sec {
+  background: var(--slate2);
+  padding: 6rem 0;
+  position: relative;
+}
+
+.perf-banner {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.big-num {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: clamp(4rem, 14vw, 9rem);
+  font-weight: 800;
+  color: var(--gold-h);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  opacity: 0.95;
+}
+.big-num sup { font-size: 0.3em; vertical-align: super; }
+.big-num sub { font-size: 0.25em; vertical-align: baseline; color: rgba(212,174,88,0.6); }
+
+.perf-caption {
+  font-size: 0.82rem;
+  color: rgba(249,246,240,0.45);
+  margin-top: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+.perf-table-wrap { overflow-x: auto; margin-top: 2.5rem; }
+.perf-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 440px;
+}
+.perf-table th {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  background: rgba(0,0,0,0.25);
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+  text-align: center;
+}
+.perf-table th:first-child { text-align: left; }
+.perf-table td {
+  padding: 0.85rem 1.2rem;
+  font-size: 0.88rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  text-align: center;
+}
+.perf-table td:first-child { text-align: left; color: rgba(249,246,240,0.6); font-size: 0.82rem; }
+.val-gold { color: var(--gold-h); font-family: 'Shippori Mincho B1', serif; font-weight: 700; font-size: 1rem; }
+.val-dim  { color: rgba(249,246,240,0.35); }
+.row-highlight td { background: rgba(184,148,63,0.06); }
+
+/* ─────────────────────────────
+   RESULTS — case studies
+───────────────────────────── */
+.results-sec {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 6rem 0;
+}
+
+.results-scroll {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1px;
+  margin-top: 3rem;
+  background: var(--paper2);
+}
+
+.res-card {
+  background: var(--paper);
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+.res-card:hover { background: #fff; }
+
+.res-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+}
+
+.res-ticker {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-d);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+.res-name {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.9rem;
+}
+.res-return {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.res-return-sub { font-size: 0.78rem; color: var(--muted); }
+.res-desc {
+  font-size: 0.79rem;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--paper2);
+}
+
+/* ─────────────────────────────
+   VOICE / TESTIMONIALS
+───────────────────────────── */
+.voice-sec {
+  background: var(--ink);
+  padding: 6rem 0;
+}
+
+.voice-marquee-wrap {
+  overflow: hidden;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.voice-marquee {
+  display: flex;
+  gap: 1rem;
+  animation: marquee 32s linear infinite;
+  width: max-content;
+}
+.voice-marquee:hover { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.voice-pill {
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  padding: 0.8rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  white-space: nowrap;
+}
+.voice-pill-amount {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--gold-h);
+}
+.voice-pill-name {
+  font-size: 0.72rem;
+  color: rgba(249,246,240,0.38);
+}
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.v-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--line);
+  padding: 1.8rem;
+  position: relative;
+}
+.v-card::before {
+  content: '"';
+  position: absolute;
+  top: -0.2rem; left: 1rem;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(184,148,63,0.12);
+  font-family: Georgia, serif;
+}
+.v-amount {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gold-h);
+  margin-bottom: 0.8rem;
+}
+.v-text {
+  font-size: 0.83rem;
+  line-height: 1.95;
+  color: rgba(249,246,240,0.6);
+  margin-bottom: 1rem;
+}
+.v-name {
+  font-size: 0.7rem;
+  color: rgba(249,246,240,0.3);
+  letter-spacing: 0.05em;
+  text-align: right;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 0.7rem;
+}
+
+/* ─────────────────────────────
+   PROFILE
+───────────────────────────── */
+.profile-sec {
+  background: var(--paper2);
+  color: var(--ink);
+  padding: 6rem 0;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+@media (max-width: 600px) { .profile-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+.profile-pic {
+  aspect-ratio: 3/4;
+  background: linear-gradient(145deg, #d6cfc4, #c0b8ac);
+  border: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  color: rgba(0,0,0,0.3);
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+}
+.profile-pic::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(184,148,63,0.3);
+}
+
+.profile-name {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+.profile-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-d);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.profile-text {
+  font-size: 0.86rem;
+  line-height: 2.05;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+}
+.p-tag {
+  font-size: 0.68rem;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba(122,96,40,0.3);
+  color: var(--gold-d);
+  letter-spacing: 0.05em;
+}
+
+/* ─────────────────────────────
+   PRICE / PRODUCT BOX
+───────────────────────────── */
+.price-sec {
+  background: var(--ink);
+  padding: 6rem 0;
+}
+
+.price-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-d), var(--gold-h), var(--gold-d));
+}
+
+.price-top {
+  padding: 2.5rem 2.5rem 2rem;
+  border-bottom: 1px solid var(--line);
+}
+.price-product-name {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.includes-list { display: grid; gap: 0.7rem; }
+.inc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: rgba(249,246,240,0.72);
+}
+.inc-check { color: var(--gold); flex-shrink: 0; font-size: 0.9rem; margin-top: 0.05rem; }
+
+.bonus-strip {
+  padding: 1.5rem 2.5rem;
+  background: rgba(184,148,63,0.05);
+  border-bottom: 1px solid var(--line);
+}
+.bonus-strip h4 {
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.bonus-items { display: grid; gap: 0.5rem; }
+.bonus-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: rgba(249,246,240,0.6);
+}
+.bonus-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+
+.price-bottom {
+  padding: 2.5rem;
+  text-align: center;
+}
+.price-tag {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.price-tag small { font-size: 0.22em; color: rgba(249,246,240,0.45); }
+.price-per {
+  font-size: 0.82rem;
+  color: var(--gold-h);
+  margin-bottom: 0.5rem;
+}
+.price-note {
+  font-size: 0.72rem;
+  color: rgba(249,246,240,0.3);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────
+   FAQ
+───────────────────────────── */
+.faq-sec {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 6rem 0;
+}
+
+.faq-list { margin-top: 3rem; border-top: 1px solid var(--paper2); }
+
+.faq-item { border-bottom: 1px solid var(--paper2); }
+
+.faq-btn {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.93rem;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.6;
+  transition: color 0.2s;
+}
+.faq-btn:hover { color: var(--gold-d); }
+.faq-q-mark { color: var(--gold); font-weight: 700; flex-shrink: 0; }
+.faq-chevron { margin-left: auto; flex-shrink: 0; font-size: 0.7rem; color: var(--gold-d); transition: transform 0.3s; }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+.faq-ans {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.faq-item.open .faq-ans { max-height: 400px; }
+.faq-ans-inner {
+  padding: 0 0 1.5rem 2rem;
+  font-size: 0.85rem;
+  line-height: 2;
+  color: var(--muted);
+}
+
+/* ─────────────────────────────
+   FINAL CTA SECTION
+───────────────────────────── */
+.final-sec {
+  background: var(--ink);
+  padding: 8rem 0 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.final-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 50% 100%, rgba(184,148,63,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.final-h {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: clamp(1.6rem, 5.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 1.4rem;
+}
+.final-sub {
+  font-size: 0.95rem;
+  color: rgba(249,246,240,0.55);
+  line-height: 2;
+  max-width: 520px;
+  margin: 0 auto 3rem;
+}
+
+/* ─────────────────────────────
+   STICKY FOOTER BAR
+───────────────────────────── */
+.sticky {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(10,8,5,0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+  padding: 0.8rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  z-index: 100;
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+}
+.sticky.show { transform: none; }
+.sticky-msg {
+  font-size: 0.78rem;
+  color: rgba(249,246,240,0.5);
+  display: none;
+}
+@media (min-width: 560px) { .sticky-msg { display: block; } }
+
+.btn-sticky {
+  background: var(--gold);
+  color: var(--ink);
+  font-family: 'Shippori Mincho B1', serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.8rem;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.btn-sticky:hover { background: var(--gold-h); }
+
+/* ─────────────────────────────
+   FOOTER
+───────────────────────────── */
+footer {
+  background: #080603;
+  padding: 3.5rem 1.25rem 2.5rem;
+  border-top: 1px solid rgba(184,148,63,0.1);
+  text-align: center;
+}
+.footer-mark {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 0.95rem;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  margin-bottom: 1.2rem;
+}
+footer p {
+  font-size: 0.72rem;
+  color: rgba(249,246,240,0.22);
+  line-height: 2;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.footer-copy {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ─────────────────────────────
+   RESPONSIVE TWEAKS
+───────────────────────────── */
+@media (max-width: 480px) {
+  .hero-nums { max-width: 100%; }
+  .hero-num-item { padding: 0.9rem 0.7rem; }
+  .price-top, .price-bottom, .bonus-strip { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .pain-col { padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar">
+  ⚠️ 情報公開後の翌日から買えなくなる銘柄が出る場合があります
+  <span>|</span>
+  販売終了のタイミングは予告なく変更されます
+</div>
+
+<!-- ══════════════════════════════
+     HERO
+══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="wrap">
+
+      <!-- urgency -->
+      <div class="urgency-bar">
+        <span class="urgency-label">⚠ 販売終了まで残りわずか</span>
+        <div class="urgency-track"><div class="urgency-fill"></div></div>
+      </div>
+
+      <!-- headline -->
+      <p class="hero-pre">自分で選ぶのをやめたら、株は変わった。</p>
+
+      <h1 class="hero-h1">
+        迷わなくていい。<br>
+        <em>答えが、ここにある。</em>
+      </h1>
+
+      <p class="hero-lead">
+        何を買えばいいか分からない。過去に負けた。時間がない。<br>
+        ——その悩みをまるごと解決する、株歴50年超のプロが選ぶ<br>
+        <strong style="color:rgba(249,246,240,0.9);">「旬の厳選10銘柄 2026年新春号」</strong>
+      </p>
+
+      <!-- stat nums -->
+      <div class="hero-nums">
+        <div class="hero-num-item">
+          <span class="hero-num-val">+183%</span>
+          <span class="hero-num-lbl">5年間最高値平均</span>
+        </div>
+        <div class="hero-num-item">
+          <span class="hero-num-val">51号</span>
+          <span class="hero-num-lbl">12年連続発行</span>
+        </div>
+        <div class="hero-num-item">
+          <span class="hero-num-val">501</span>
+          <span class="hero-num-lbl">推奨総銘柄数</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-block" style="display:flex;flex-wrap:wrap;gap:0.8rem;align-items:center;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AZMKJ+5H2ISA+ONS+TXW0I" class="btn-primary">
+          今すぐ手に入れる →
+        </a>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AZMKJ+5H2ISA+ONS+TXW0I" class="btn-ghost">
+          📁 無料で過去実績を見る
+        </a>
+      </div>
+      <p class="cta-sub">分割払い最大24回対応 ／ お申し込み後すぐに閲覧開始</p>
+
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     WHO — ターゲット共感
+══════════════════════════════ -->
+<section class="target-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--gold-d);border-color:var(--gold-d);">WHO IS THIS FOR</span>
+      <h2 class="section-h">あなたは、この3つのどれかに当てはまりますか？</h2>
+    </div>
+    <div class="who-grid rv d2">
+      <div class="who-card">
+        <span class="who-icon">😕</span>
+        <h3>何を買えばいいか<br>分からない</h3>
+        <p>銘柄が多すぎて選べない。四季報を開いても何をどう見ればいいか分からない。結局、テレビやSNSの情報に頼って買ってしまう。</p>
+      </div>
+      <div class="who-card">
+        <span class="who-icon">📉</span>
+        <h3>過去に負けた経験が<br>トラウマになっている</h3>
+        <p>自己流で動くたびに傷を広げてきた。損失を取り戻したいのに、怖くて次の一手が踏み出せない。信頼できる情報がどこにあるか分からない。</p>
+      </div>
+      <div class="who-card">
+        <span class="who-icon">⏰</span>
+        <h3>忙しくて分析する<br>時間がない</h3>
+        <p>本当は真剣に投資したい。でも仕事・家族・生活に追われて、じっくり相場と向き合う時間が取れない。気づいたら買い時を逃している。</p>
+      </div>
+    </div>
+    <div class="who-conclusion rv d3">
+      <p>
+        その悩みは、努力不足でも能力不足でもありません。<br>
+        ただ、<span style="color:var(--gold-h);">「正しい答えをくれる情報源」</span>を持っていなかっただけです。
+        <strong>株歴50年超のプロが、その答えをそのまま渡します。</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     WHAT — 何が手に入るか
+══════════════════════════════ -->
+<section class="what-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">WHAT YOU GET</span>
+      <h2 class="section-h">手に入るのは<br>「銘柄名」ではなく「答え＋理由＋戦略」</h2>
+    </div>
+    <div class="what-reveal">
+      <div class="what-card rv d1">
+        <div class="what-card-num">01</div>
+        <h3>厳選10銘柄リスト（PDF）</h3>
+        <p>今この瞬間、最も上昇確率が高いと判断した10銘柄を明示。「M&A期待」「大化け狙い」など見出しと期待度5段階評価付き。</p>
+      </div>
+      <div class="what-card rv d2">
+        <div class="what-card-num">02</div>
+        <h3>オンライン解説動画</h3>
+        <p>なぜこの株を選んだか、藤ノ井氏が顔出しで根拠を語る。「なんとなく買う」ではなく、「理由を理解して買う」ための完全ガイド。</p>
+      </div>
+      <div class="what-card rv d3">
+        <div class="what-card-num">03</div>
+        <h3>上値・下値の目処</h3>
+        <p>「いくらになったら売るか」まで明示。利食いのタイミングで迷わなくなる。エントリー価格の目安も提示。</p>
+      </div>
+      <div class="what-card rv d4">
+        <div class="what-card-num">04</div>
+        <h3>売買戦略・リスク管理</h3>
+        <p>打診買い・ナンピン・損切りの考え方まで解説。同じ銘柄を持っていても、成果が変わるのはここの差。</p>
+      </div>
+    </div>
+    <div class="what-highlight rv d3">
+      <p>
+        銘柄名だけ教えてもらっても勝てない。<br>
+        <strong>「なぜ今この株か」「いつ買っていつ売るか」——答えごと、まるごと手に入る。</strong><br>
+        <span style="font-size:0.82rem;color:rgba(249,246,240,0.45);margin-top:0.5rem;display:block;">それがリピーターが「FPO以外では買わない」と言い続ける理由です。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     WHY — なぜ必要か（自分で選ぶと失敗する）
+══════════════════════════════ -->
+<section class="why-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--gold-d);border-color:var(--gold-d);">WHY YOU NEED THIS</span>
+      <h2 class="section-h">自分で選び続けると、<br>なぜ負けるのか。</h2>
+    </div>
+    <div class="pain-vs rv d2">
+      <div class="pain-col bad">
+        <h4>❌ 自己流の場合</h4>
+        <div class="pain-list-item"><span class="pain-marker">✗</span><span>情報が多すぎて何が正しいか判断できない</span></div>
+        <div class="pain-list-item"><span class="pain-marker">✗</span><span>SNS・雑誌の銘柄は既に「上がった後」の情報</span></div>
+        <div class="pain-list-item"><span class="pain-marker">✗</span><span>財務諸表・IR情報を読み解く時間と知識が必要</span></div>
+        <div class="pain-list-item"><span class="pain-marker">✗</span><span>感情で動き、高値掴み・安値投げを繰り返す</span></div>
+        <div class="pain-list-item"><span class="pain-marker">✗</span><span>売り時が分からず、利益を逃し続ける</span></div>
+      </div>
+      <div class="pain-vs-arrow"><span>→</span></div>
+      <div class="pain-col good">
+        <h4>✓ 旬の厳選10銘柄の場合</h4>
+        <div class="pain-list-item"><span class="pain-marker" style="color:var(--gold-d);">✓</span><span style="color:var(--muted);">50年の経験でフィルタリングされた「今買うべき10銘柄」だけが届く</span></div>
+        <div class="pain-list-item"><span class="pain-marker" style="color:var(--gold-d);">✓</span><span style="color:var(--muted);">市場が気づく前に「仕込んでおく」から急騰の恩恵を受けられる</span></div>
+        <div class="pain-list-item"><span class="pain-marker" style="color:var(--gold-d);">✓</span><span style="color:var(--muted);">財務・IR確認・スクリーニングはすべてプロが代わりにやる</span></div>
+        <div class="pain-list-item"><span class="pain-marker" style="color:var(--gold-d);">✓</span><span style="color:var(--muted);">下値硬直性のある銘柄を選ぶから、判断ストレスが激減する</span></div>
+        <div class="pain-list-item"><span class="pain-marker" style="color:var(--gold-d);">✓</span><span style="color:var(--muted);">上値・下値目処まで提示されるから、売り時で迷わない</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     WHEN — いつ買うか（緊急性）
+══════════════════════════════ -->
+<section class="when-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">WHEN TO ACT</span>
+      <h2 class="section-h">「販売終了前」が、<br>最大のタイミングです。</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="rv d2">
+      <div>
+        <div class="when-timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <span class="tl-period">3月 / 6月 / 9月 / 12月</span>
+            <h4>四半期ごとに新号を発行</h4>
+            <p>新春・春・夏・秋の年4回。市況に合わせた最新の厳選銘柄が届く。</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot now"></div>
+            <span class="tl-period" style="color:var(--red);">← 今ここ</span>
+            <h4 style="color:var(--red);">販売終了が近い</h4>
+            <p>銘柄が市場に知れ渡ると情報価値が低下するため、随時販売終了。翌日にはすでに手に入らないことも。</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:rgba(249,246,240,0.15);"></div>
+            <span class="tl-period" style="color:rgba(249,246,240,0.3);">販売終了後</span>
+            <h4 style="color:rgba(249,246,240,0.35);">購入不可</h4>
+            <p style="color:rgba(249,246,240,0.3);">株価が動いてからでは「早い人だけが得をした」銘柄になる。</p>
+          </div>
+        </div>
+      </div>
+      <div class="urgency-box rv d3">
+        <h4>⚠ 過去に実際に起きたこと</h4>
+        <p>
+          情報公開の翌日から連続ストップ高になった銘柄が出たことがあります。<br><br>
+          「買おうと思っていたのに、気づいたら販売が終わっていた」という声は毎号届きます。<br><br>
+          株式投資において「動く前に仕込む」と「動いてから知る」では、得られる利益がまるで違います。<strong style="color:rgba(249,246,240,0.85);">判断は今、このページを読んでいるうちに。</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     HOW — 選定ロジック
+══════════════════════════════ -->
+<section class="how-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--gold-d);border-color:var(--gold-d);">HOW IT WORKS</span>
+      <h2 class="section-h">どうやって選ぶのか——<br>50年の目利きの「型」</h2>
+    </div>
+    <div class="how-steps rv d2">
+      <div class="how-step">
+        <div class="how-step-num">01</div>
+        <div class="how-step-body">
+          <h4>「小型×割安」にフォーカスする</h4>
+          <p>時価総額1,000億円未満の小型株に9割以上を絞る。市場がまだ気づいていない「伸びしろ」が残っている銘柄群。PER15倍未満・PBR1倍未満が中心で、長期データでTOPIXを安定アウトパフォームする傾向が統計的にも確認されている。</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">02</div>
+        <div class="how-step-body">
+          <h4>ミスプライス（市場の歪み）を見抜く</h4>
+          <p>過剰反応で本来の価値から外れた株価は、必ず本来の水準に戻る。その「戻り」を狙って仕込むのがミスプライス投資。短期急騰も、中長期の安定上昇も、この歪みの修正過程から生まれる。</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">03</div>
+        <div class="how-step-body">
+          <h4>「次に来る材料」を先読みして仕込む</h4>
+          <p>四季報を擦り切れるほど読み込み、IRに電話を入れ、材料が表に出る前に仕込む。市場参加者が気づく「前」に入るからこそ、急騰の恩恵を最大限享受できる。</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">04</div>
+        <div class="how-step-body">
+          <h4>配当で「下値の床」を作る</h4>
+          <p>配当のある銘柄は下値が支えられやすく、投げ売りが出にくい（下値硬直性）。相場が荒れても「持ち続けられる精神的安定」が損失を防ぎ、上昇局面での爆発力を引き出す。</p>
+        </div>
+      </div>
+    </div>
+    <div class="data-chips rv d3">
+      <div class="chip">小型株比率 93.5%</div>
+      <div class="chip">PBR1倍未満 64.4%</div>
+      <div class="chip">配当あり 93.6%</div>
+      <div class="chip">配当利回り2.5%以上 52.5%</div>
+      <div class="chip">2013〜2026年 全50号の実績に基づく</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     PERFORMANCE — 数字で証明
+══════════════════════════════ -->
+<section class="perf-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">TRACK RECORD</span>
+      <h2 class="section-h">12年・501銘柄が証明する、<br>圧倒的な数字。</h2>
+    </div>
+    <div class="perf-banner rv d2" style="margin-top:3rem;">
+      <div class="big-num"><sup>+</sup>183<sub>%</sub></div>
+      <p class="perf-caption">501銘柄の5年間期間内最高値の平均リターン（推奨日から5年後月末終値比）</p>
+    </div>
+    <div class="perf-table-wrap rv d3">
+      <table class="perf-table">
+        <thead>
+          <tr>
+            <th>比較対象</th>
+            <th>1年後</th>
+            <th>3年後</th>
+            <th>5年後</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TOPIX（市場平均・終値）</td>
+            <td class="val-dim">+8.52%</td>
+            <td class="val-dim">+21.64%</td>
+            <td class="val-dim">+38.41%</td>
+          </tr>
+          <tr>
+            <td>旬の厳選10銘柄（終値平均）</td>
+            <td class="val-gold">+16.90%</td>
+            <td class="val-gold">+51.82%</td>
+            <td class="val-gold">+83.57%</td>
+          </tr>
+          <tr class="row-highlight">
+            <td style="color:var(--gold-h);font-size:0.8rem;">旬の厳選10銘柄（期間内最高値）</td>
+            <td class="val-gold" style="font-size:1.05rem;">+43.79%</td>
+            <td class="val-gold" style="font-size:1.05rem;">+105.04%</td>
+            <td class="val-gold" style="font-size:1.05rem;">+183.78%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="rv d4" style="font-size:0.72rem;color:rgba(249,246,240,0.3);margin-top:1rem;text-align:center;">推奨日から1年・3年・5年後の月末終値で算出。期間を満たす銘柄のみを対象。上場廃止銘柄は除外。</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     RESULTS — 直近実績
+══════════════════════════════ -->
+<section class="results-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--gold-d);border-color:var(--gold-d);">RECENT RESULTS</span>
+      <h2 class="section-h">直近1年間の推奨銘柄から（一部抜粋）</h2>
+    </div>
+    <div class="results-scroll">
+      <div class="res-card rv d1">
+        <span class="res-ticker">6941 · 2025年新春号</span>
+        <div class="res-name">山一電機</div>
+        <div class="res-return">+184%</div>
+        <div class="res-return-sub">株価 約3倍</div>
+        <p class="res-desc">AI半導体検査用ソケット需要の追い風を先読み。推奨後ほぼ下げることなく美しく上昇。</p>
+      </div>
+      <div class="res-card rv d2">
+        <span class="res-ticker">6360 · 2025年新春号</span>
+        <div class="res-name">東京自働機械製作所</div>
+        <div class="res-return">+65%</div>
+        <div class="res-return-sub">約2ヶ月で上方修正→急騰</div>
+        <p class="res-desc">上方修正を事前に予測して推奨。決算発表で窓を開けて急騰。「読み通り」の展開。</p>
+      </div>
+      <div class="res-card rv d3">
+        <span class="res-ticker">4016 · 2025年春号</span>
+        <div class="res-name">MITホールディングス</div>
+        <div class="res-return">+65%</div>
+        <div class="res-return-sub">DX・GIGA第2期を先取り</div>
+        <p class="res-desc">全体相場下落に一時巻き込まれるも力強く回復。株価1.65倍まで上昇。</p>
+      </div>
+      <div class="res-card rv d1">
+        <span class="res-ticker">8043 · 2025年春号</span>
+        <div class="res-name">スターゼン</div>
+        <div class="res-return">+44%</div>
+        <div class="res-return-sub">インバウンド和牛需要</div>
+        <p class="res-desc">推奨後すぐに大きく上昇。その後も高値水準で推移。ストレスゼロの保有体験。</p>
+      </div>
+      <div class="res-card rv d2">
+        <span class="res-ticker">4366 · 2025年夏号</span>
+        <div class="res-name">ダイトーケミックス</div>
+        <div class="res-return">+50%</div>
+        <div class="res-return-sub">約3ヶ月で株価1.5倍</div>
+        <p class="res-desc">推奨後すぐに上昇開始。電子材料・医薬中間体の需要拡大を先読み。</p>
+      </div>
+      <div class="res-card rv d3">
+        <span class="res-ticker">8070 · 2025年夏号</span>
+        <div class="res-name">東京産業</div>
+        <div class="res-return">+44%</div>
+        <div class="res-return-sub">わずか3ヶ月で</div>
+        <p class="res-desc">原子力・火力発電保守の堅調を先取り。推奨後から危なげなく堅調に推移。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     VOICE — 購入者の声（マーキー＋カード）
+══════════════════════════════ -->
+<section class="voice-sec">
+  <div class="rv">
+    <div class="wrap">
+      <span class="eyebrow">MEMBER VOICES</span>
+      <h2 class="section-h">初心者も、負けていた人も、<br>結果が変わった。</h2>
+    </div>
+  </div>
+
+  <!-- marquee strip -->
+  <div class="voice-marquee-wrap rv d1" style="margin-top:2.5rem;">
+    <div class="voice-marquee">
+      <!-- set A -->
+      <div class="voice-pill"><span class="voice-pill-amount">+100万円（1,000株で）</span><span class="voice-pill-name">もちの木庵さん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">年間平均 +300万円</span><span class="voice-pill-name">もりちゃんさん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">+288万円 利確</span><span class="voice-pill-name">加藤さん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">ボーナス8ヶ月分の利益</span><span class="voice-pill-name">為替の助さん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">マイナス200万→プラス130万</span><span class="voice-pill-name">suwさん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">100万→約2,000万弱</span><span class="voice-pill-name">キクさん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">3銘柄合計 +167万円</span><span class="voice-pill-name">佐藤さん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">+104万円（1銘柄で）</span><span class="voice-pill-name">ケンちゃんさん</span></div>
+      <!-- set B (duplicate for seamless loop) -->
+      <div class="voice-pill"><span class="voice-pill-amount">+100万円（1,000株で）</span><span class="voice-pill-name">もちの木庵さん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">年間平均 +300万円</span><span class="voice-pill-name">もりちゃんさん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">+288万円 利確</span><span class="voice-pill-name">加藤さん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">ボーナス8ヶ月分の利益</span><span class="voice-pill-name">為替の助さん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">マイナス200万→プラス130万</span><span class="voice-pill-name">suwさん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">100万→約2,000万弱</span><span class="voice-pill-name">キクさん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">3銘柄合計 +167万円</span><span class="voice-pill-name">佐藤さん</span></div>
+      <div class="voice-pill"><span class="voice-pill-amount">+104万円（1銘柄で）</span><span class="voice-pill-name">ケンちゃんさん</span></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="voice-grid rv d2" style="margin-top:2rem;">
+      <div class="v-card">
+        <div class="v-amount">マイナス200万 → プラス130万</div>
+        <p class="v-text">株を始めて2年、それまでのマイナスは200万円。夏の推奨銘柄購入後、6月の大暴落も関係なく毎日が楽しくなりました。下がる不安がない選定のため安心して試し買いができるようになりました。今はプラス130万円。</p>
+        <div class="v-name">suw さん</div>
+      </div>
+      <div class="v-card">
+        <div class="v-amount">500万円の損失 → 2〜3年で取り返す</div>
+        <p class="v-text">2017年秋号からの連続参加です。当時500万円近くあった損失をわずか2〜3年で取り返すことができました。他の投資顧問では何度も痛い目に遭いましたが、ようやく本物に出会えたと感じています。</p>
+        <div class="v-name">やっくん さん</div>
+      </div>
+      <div class="v-card">
+        <div class="v-amount">何も知らなかった私が +288万円</div>
+        <p class="v-text">合計¥2,884,000円の税抜きの実質利確分。何も知らない私がこれだけの稼ぎができたのは正に教えられた銘柄の力です。総括すると、紹介される銘柄は本当に安心して仕入れることができるものばかりです。</p>
+        <div class="v-name">加藤 さん</div>
+      </div>
+      <div class="v-card">
+        <div class="v-amount">100万スタート → 約2,000万弱</div>
+        <p class="v-text">100万から始めて、今は約2,000万弱になっております。日本航空電子では大分利益を上げさせていただきました。最近は藤ノ井先生の推薦銘柄を握って「死んだふり」しているだけです。かなり利益が出ています。</p>
+        <div class="v-name">キク さん / Mat さん</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     PROFILE — 藤ノ井俊樹
+══════════════════════════════ -->
+<section class="profile-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--gold-d);border-color:var(--gold-d);">ADVISOR PROFILE</span>
+      <h2 class="section-h">選ぶのは、このプロです。</h2>
+    </div>
+    <div class="profile-grid rv d2" style="margin-top:3rem;">
+      <div>
+        <div class="profile-pic">
+          <span style="font-size:3rem;opacity:0.25;">👤</span>
+          <span style="font-size:0.6rem;letter-spacing:0.15em;opacity:0.4;">FUJINOI TOSHIKI</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="profile-name">藤ノ井 俊樹</h3>
+        <span class="profile-title">株式投資アドバイザー · 投資歴50年超 · 著書4冊</span>
+        <p class="profile-text">投資を始めたのは10歳。愛読書は『会社四季報』で、ランドセルに入れて学校に行き先生に怒られたエピソードも持つ。証券会社の法人部門を経て独立後、50年以上にわたり独自の着眼点から相場を読み解き続ける。</p>
+        <p class="profile-text">「自分が損するのはもちろん嫌だが、皆さんが損するのも嫌です」——その言葉を体現し、銘柄公開1週間前は平均睡眠3時間で最終チェックを行う。日経マネー掲載多数、ジム・ロジャーズ氏との対談も実現した現役プロ。</p>
+        <p class="profile-text" style="color:var(--gold-d);font-weight:700;">「株と共に生きる」を座右の銘に、60歳・株歴50年を超えた今もなお第一線で活躍し続ける生粋の投資家。</p>
+        <div class="profile-tags">
+          <span class="p-tag">投資歴50年超</span>
+          <span class="p-tag">著書4冊</span>
+          <span class="p-tag">日経マネー掲載多数</span>
+          <span class="p-tag">ミスプライス投資の第一人者</span>
+          <span class="p-tag">ジム・ロジャーズ氏と対談</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     PRICE
+══════════════════════════════ -->
+<section class="price-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">PRICING</span>
+      <h2 class="section-h">価格と内容——<br>1銘柄あたり、たった1万円。</h2>
+    </div>
+    <div class="price-card rv d2" style="margin-top:3rem;">
+      <div class="price-top">
+        <div class="price-product-name">藤ノ井俊樹の旬の厳選10銘柄<br>【2026年新春号 · 第51号】</div>
+        <div class="includes-list">
+          <div class="inc-item"><span class="inc-check">◆</span><span><strong style="color:#fff;">高騰期待 厳選10銘柄リスト（PDF）</strong>——期待度5段階評価・見出しコメント付き</span></div>
+          <div class="inc-item"><span class="inc-check">◆</span><span><strong style="color:#fff;">藤ノ井氏による全銘柄オンライン解説動画</strong>——上値・下値目処・売買戦略まで完全解説</span></div>
+          <div class="inc-item"><span class="inc-check">◆</span><span>申し込み後すぐに銘柄・動画を閲覧開始</span></div>
+          <div class="inc-item"><span class="inc-check">◆</span><span>クレジットカード分割払い 最大24回対応（月々 約4,583円〜）</span></div>
+        </div>
+      </div>
+      <div class="bonus-strip">
+        <h4>SPECIAL BONUS — 無料特典 3点</h4>
+        <div class="bonus-items">
+          <div class="bonus-item"><div class="bonus-dot"></div><span>『会社四季報 2026年新春号』の見どころ（動画）</span></div>
+          <div class="bonus-item"><div class="bonus-dot"></div><span>会社四季報を効率よく使いこなす方法（動画）</span></div>
+          <div class="bonus-item"><div class="bonus-dot"></div><span>ズバリ！株の買い時、利食い時（動画）——利益を最大化する売買ルール完全解説</span></div>
+        </div>
+      </div>
+      <div class="price-bottom">
+        <div class="price-tag">¥100,000<small>（税込¥110,000）</small></div>
+        <p class="price-per">10銘柄で10万円 = 1銘柄あたり たった1万円</p>
+        <p class="price-note">投資資金100万円なら、10%上昇でほぼ元が取れる計算<br>分割払いの場合は各カード会社の規約に基づき別途手数料が発生します</p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AZMKJ+5H2ISA+ONS+TXW0I" class="btn-primary" style="font-size:1.1rem;padding:1.2rem 3.5rem;box-shadow:0 6px 40px rgba(184,148,63,0.45);">
+          今すぐ「旬の厳選10銘柄」を手に入れる →
+        </a>
+        <p style="font-size:0.72rem;color:rgba(249,246,240,0.28);margin-top:1rem;line-height:1.7;">
+          ※株価・企業業績の変動により予告なく販売を終了する場合があります。早期のご決断をお勧めします。
+        </p>
+      </div>
+    </div>
+
+    <!-- ghost CTA -->
+    <div class="rv d3" style="text-align:center;margin-top:1.5rem;">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4AZMKJ+5H2ISA+ONS+TXW0I" class="btn-ghost">
+        📁 まずは過去の推奨銘柄を無料で確認する
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FAQ
+══════════════════════════════ -->
+<section class="faq-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--gold-d);border-color:var(--gold-d);">FAQ</span>
+      <h2 class="section-h">よくある質問</h2>
+    </div>
+    <div class="faq-list rv d2">
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="faq(this)">
+          <span class="faq-q-mark">Q</span>
+          <span>株初心者でも使えますか？知識がなくても大丈夫ですか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-ans">
+          <div class="faq-ans-inner">はい、初心者の方こそ最も恩恵を受けられます。銘柄を「選ぶ」作業をプロが代わりに行うため、あなたは「買う・持つ・売る」だけに集中できます。さらに解説動画で「なぜ今この株なのか」を理解することで、自然に投資スキルが身につきます。</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="faq(this)">
+          <span class="faq-q-mark">Q</span>
+          <span>過去に株で大きく負けています。取り戻せますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-ans">
+          <div class="faq-ans-inner">「500万円の損失を2〜3年で取り戻した」「マイナス200万からプラス130万になった」という声を多数いただいています。重要なのは、過去の損失ではなく「これからの銘柄の質」です。下値硬直性のある銘柄を選ぶことで、リスクを抑えながらリベンジできます。</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="faq(this)">
+          <span class="faq-q-mark">Q</span>
+          <span>忙しくて相場を毎日チェックする時間がありません。</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-ans">
+          <div class="faq-ans-inner">むしろ「忙しくて毎日見られない」方に向いています。下値硬直性のある銘柄を選ぶため、短期的な変動に一喜一憂する必要が少なく、「買って待つ」スタイルで成果が出やすい設計です。「最近は推薦銘柄を握って死んだふりしているだけです」という声も届いています。</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="faq(this)">
+          <span class="faq-q-mark">Q</span>
+          <span>購入後、いつから銘柄を見られますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-ans">
+          <div class="faq-ans-inner">お申し込み完了後すぐに、銘柄リストと解説動画をオンラインで閲覧できます。販売終了のタイミングは株価・企業業績の変動により予告なく変更されますので、お早めのご決断をお勧めします。</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="faq(this)">
+          <span class="faq-q-mark">Q</span>
+          <span>分割払いはできますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-ans">
+          <div class="faq-ans-inner">クレジットカードによる分割払いに対応しており、最大24回まで選択いただけます。24回払いの場合、月々約4,583円でご利用いただけます（各カード会社の規約に基づき別途手数料が発生します）。</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="faq(this)">
+          <span class="faq-q-mark">Q</span>
+          <span>必ず儲かりますか？損する可能性はありますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-ans">
+          <div class="faq-ans-inner">株式投資にはリスクが伴い、元本保証や利益を確約するものではありません。ただし、12年・501銘柄の平均リターンはTOPIXを大幅に上回っており、「アタリの方が断然多く利益を出しています」という声が継続的に届いています。購入前に過去の推奨銘柄を無料で確認することもできます。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FINAL CTA
+══════════════════════════════ -->
+<section class="final-sec">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">TAKE ACTION</span>
+      <h2 class="final-h">
+        「買いたいけど迷っている」<br>
+        <span style="color:var(--gold-h);">その迷いを、終わりにしませんか。</span>
+      </h2>
+      <p class="final-sub">
+        あなたが迷っている間にも、株価は動いています。<br>
+        情報公開の翌日から動き始める銘柄もある。<br>
+        今日の決断が、次の四半期の結果を決める。
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AZMKJ+5H2ISA+ONS+TXW0I" class="btn-primary" style="font-size:1.1rem;padding:1.2rem 3.5rem;">
+          今すぐ「旬の厳選10銘柄」を手に入れる →
+        </a>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AZMKJ+5H2ISA+ONS+TXW0I" class="btn-ghost">
+          📁 無料で過去実績を確認する
+        </a>
+      </div>
+      <p style="font-size:0.72rem;color:rgba(249,246,240,0.25);margin-top:1.5rem;line-height:1.8;">
+        ¥100,000（税込¥110,000）· 分割払い最大24回対応 · 申し込み後すぐに閲覧開始
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer>
+  <div class="footer-mark">藤ノ井俊樹の旬の厳選10銘柄</div>
+  <p>本サービスは金融商品取引法に基づく投資助言サービスです。株式投資は元本割れのリスクがあります。投資の最終判断はご自身の責任においてお願いいたします。掲載の実績・お客様の声は個人の体験に基づくものであり、将来の運用成果を保証するものではありません。</p>
+  <div class="footer-copy">
+    <p>© 2026 FPO Inc. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="sticky" id="sticky">
+  <p class="sticky-msg">⚠ 販売終了前 · 株歴50年超のプロが選ぶ厳選10銘柄 · ¥100,000（税込）</p>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4AZMKJ+5H2ISA+ONS+TXW0I" class="btn-sticky">今すぐ購入 →</a>
+</div>
+
+<script>
+// FAQ accordion
+function faq(btn) {
+  const item = btn.closest('.faq-item');
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+  if (!open) item.classList.add('open');
+}
+
+// Scroll reveal
+const rvEls = document.querySelectorAll('.rv');
+const rvObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rvObs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+rvEls.forEach(el => rvObs.observe(el));
+
+// Sticky bar
+const stickyEl = document.getElementById('sticky');
+window.addEventListener('scroll', () => {
+  stickyEl.classList.toggle('show', window.scrollY > window.innerHeight * 0.55);
+}, { passive: true });
+</script>
+</body>
+</html>
